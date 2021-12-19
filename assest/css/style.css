@@ -1,0 +1,146 @@
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+body {
+    font-family:  sans-serif;
+   
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    width: 1fr;
+    padding: 30px 30px;
+}
+.header img{
+    width: 200px;
+}
+.img-cont {  }
+    .img-cont .img {
+     
+        background: url("../images/illustration-mockups.svg") no-repeat;
+        
+    }
+    .content{
+        display: grid;
+row-gap: 30px;
+    }
+    .content h1, .content p{
+        color: whitesmoke;
+        font-weight:500;
+    }
+    .content p {
+        font-size: 17px;
+    }
+    .content button {
+        width: 60%;
+        height: 50px;
+        border: 0px;
+        font-size: 15px;
+        color: var(--Violet);
+        border-radius: 60px;
+        margin: auto;
+        box-shadow: 0px 2px 5px rgb(0, 0, 0,0.5);
+    }
+    .content button:hover{
+        color: whitesmoke;
+        background: var(--Soft-Magenta);
+    }
+    .footer ul{
+        margin-top: 50px;
+        text-align: center;
+
+    }
+    .footer li {
+        display: inline-block;   
+    }
+    .fa {
+        font-size: 20px;
+        color: whitesmoke;
+        height: 35px;
+        width: 35px;
+        padding-top: 6px;
+        margin-left: 10px;
+        border: 1px solid whitesmoke;
+        border-radius: 50%;
+        
+    }
+    .fa:hover{
+        color: var(--Soft-Magenta);
+        border-color: var(--Soft-Magenta);
+    }
+@media only screen and (max-width:700px){
+    body{
+   background: url("../images/bg-mobile.svg") no-repeat;
+   background-color: var(--Violet);
+   background-size: contain;
+    }
+    .content h1, .content p{
+       text-align: center;
+    }
+    .header img{
+        width: 140px;
+    }
+    .img-cont { padding: 50px 10px;}
+    .img-cont .img {
+        height: 220px;
+        background-size: 100% 100%;
+    }
+    .footer {
+        padding-bottom: 20px ;
+    }
+
+
+
+    
+}
+@media only screen and (min-width:700px){
+    body {
+        background: url("../images/bg-desktop.svg") no-repeat;
+        background-size: cover;
+        background-color: var(--Violet);
+         }
+         .container{
+             padding: 50px;
+             height: 100vh;
+             column-gap: 50px;
+             grid-auto-rows: 15% 1fr 10%;
+             grid-template-columns: 1fr 1fr;
+         }
+         .img-cont{
+             grid-column: 1/2;
+         }
+         .img-cont { }
+    .img-cont .img {
+        height: 100%;
+        background-size: 100% 100%;
+    }
+    .content{
+        display: unset;
+        width: 70%;
+    }
+    .content>*{
+        margin-bottom: 40px;
+    }
+    .content button{
+        width: 40%;
+    }
+
+    .footer{
+        grid-column: 2/3;
+        
+    }
+    .footer ul{
+        text-align: right;
+    }
+    .footer li {
+        text-align: center;
+    }
+
+   
+}
